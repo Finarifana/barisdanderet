@@ -1,26 +1,25 @@
-function calculateArithmetic() {
-    var a = parseFloat(document.getElementById('input').value);
-    var d = parseFloat(document.getElementById('input2').value);
-    var n = parseInt(document.getElementById('n').value);
-  
-    var result = 0;
-    for (var i = 0; i < n; i++) {
-      result += a + i * d;
-    }
-  
-    document.getElementById('result').innerText = "Jumlah baris aritmatika: " + result;
-  }
-  
-  function calculateGeometric() {
-    var a = parseFloat(document.getElementById('input').value);
-    var r = parseFloat(document.getElementById('input2').value);
-    var n = parseInt(document.getElementById('n').value);
-  
-    var result = 0;
-    for (var i = 0; i < n; i++) {
-      result += a * Math.pow(r, i);
-    }
-  
-    document.getElementById('result').innerText = "Jumlah baris geometri: " + result;
-  }
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baris dan Deret Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <h2>Kalkulator Baris dan Deret</h2>
+    <p>Baris dan deret adalah konsep dasar dalam matematika. Baris adalah sekumpulan bilangan yang disusun secara berurutan sesuai dengan suatu aturan tertentu. Sedangkan deret adalah hasil penjumlahan suku-suku dari sebuah baris.</p>
+    <p>Contoh: Baris aritmatika dengan suku pertama 3 dan beda 4: 3, 7, 11, 15, 19, ...</p>
+    <p>Contoh: Deret aritmatika dengan suku pertama 3 dan beda 4: 3 + 7 + 11 + 15 + 19 + ...</p>
+    <p>Silakan masukkan nilai suku pertama, beda/rasio, dan jumlah suku yang ingin Anda hitung, kemudian klik tombol untuk menghitung jumlahnya.</p>
+    <input type="text" id="input" placeholder="Masukkan suku pertama">
+    <input type="text" id="input2" placeholder="Masukkan beda/rasio">
+    <input type="number" id="n" placeholder="Masukkan jumlah suku">
+    <button onclick="calculateArithmetic()">Hitung Baris Aritmatika</button>
+    <button onclick="calculateGeometric()">Hitung Baris Geometri</button>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
